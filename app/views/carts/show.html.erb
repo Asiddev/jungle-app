@@ -4,7 +4,7 @@
     <h1>My Cart</h1>
   </header>
 
-  <% if enhanced_cart.length == 0 %>
+  <% if enhanced_cart.empty? %>
     <div class="d-flex justify-content-center flex-column align-items-center">
       <h1 class="alert alert-success text-center" role="alert">Empty cart. Please go shopping</h1>
       <a href="/" class="btn btn-info btn-lg" role="button">Home</a>
