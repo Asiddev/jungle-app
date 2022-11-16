@@ -1,2 +1,20 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+
+<h1 class="text-center mt-5">ADMIN dashboard</h1>
+<div class="d-flex flex-column card p-5" style="
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color : #98FB98">
+    <table class="text-center mt-5">
+<h2 class="text-center mt-5">Database Stats</h2>
+  <tr>
+<th>Total Products</th>
+<th>Total Catagories</th>
+  </tr>
+  <tr style='background-color: white; max-width: 20px'>
+    <td><%= @product_count %></td>
+    <td><%= @categories_count %></td>
+  </tr>
+</table>
