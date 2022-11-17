@@ -69,10 +69,20 @@
           <li class="nav-item">
           <a>
           <%= link_to 'About Us', :about, class: "nav-link text-white" %>
+          
           </a>
         </li>
+        <span>
+        <% if current_user %>
+  Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+<% else %>
+  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+<% end %>
+
+        </span>
       </ul>
     </div>
+    
   </div>
 </nav>
 <script>
