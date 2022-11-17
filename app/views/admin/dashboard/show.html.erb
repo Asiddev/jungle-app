@@ -17,5 +17,36 @@
     <td><%= @product_count %></td>
     <td><%= @categories_count %></td>
   </tr>
+  </tr>
 </table>
+
+
+<div class="d-flex justify-content-evenly align-content-center">
+<div >
+<h1>All products</h1>
+<ul>
+<% @products.each do |product| %>
+<li> 
+  <%= product.name %>
+    <% end %>
+</li>
+
+
+</ul>
+
+</div>
+
+<div>
+<h1>All Categories</h1>
+<ul>
+<% @categories.each do |category| %>
+<li> 
+  <%= category.name %>
+    <% end %>
+</li>
+
+
+</ul>
+</div>
+</div>
 </div>
