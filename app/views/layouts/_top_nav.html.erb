@@ -6,8 +6,8 @@
     <h2>Where you can find any plants!</h2>
   </section>
 </header>
-<nav class="navbar navbar-expand-lg navbar-dark sticky-nav">
-  <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-nav ">
+  <div class="container ">
     <a class="navbar-brand" href="<%= root_path %>">Jungle</a>
     <button
       class="navbar-toggler"
@@ -56,7 +56,7 @@
           >
             Admin
           </a>
-          <ul class="dropdown-menu dropdown-menu-dark">
+          <ul class="dropdown-menu dropdown-menu-dark ">
             <li><%= link_to 'Dashboard', [:admin, :root], class: "nav-link" %></li>
             <li><%= link_to 'Products', [:admin, :products], class: "nav-link" %></li>
              <li><%= link_to 'Categories', [:admin, :categories], class: "nav-link" %></li>
@@ -71,8 +71,14 @@
           <%= link_to 'About Us', :about, class: "nav-link text-white" %>
           </a>
         </li>
+          <% if current_user %>
+           Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout',  class: "text-white nav-link" %>
+          <% else %>
+            <%= link_to 'Login', '/login' , class: "text-white nav-link" %> | <%= link_to 'Signup', '/signup', class: "text-white nav-link" %>
+          <% end %>
       </ul>
     </div>
+    
   </div>
 </nav>
 <script>
