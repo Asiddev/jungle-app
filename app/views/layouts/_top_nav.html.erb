@@ -72,7 +72,7 @@
           </a>
         </li>
           <% if current_user %>
-           Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout',  class: "text-white nav-link" %>
+           Signed in as <%= current_user.first_name %> | <%= link_to "Logout", '/logout',  class: "text-white nav-link" %>
           <% else %>
             <%= link_to 'Login', '/login' , class: "text-white nav-link" %> | <%= link_to 'Signup', '/signup', class: "text-white nav-link" %>
           <% end %>
