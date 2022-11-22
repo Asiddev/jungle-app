@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Product, type: :model do
   describe 'Validations' do
+
+    #works for all valid entry tests
     it "confirms valid entry" do
       @newCategory = Category.new
       @newCategory.name = 'Test Category'
